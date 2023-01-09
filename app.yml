@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: acrviswa.azurecr.io/samples/naginx:71
+        image: acrviswa.azurecr.io/samples/naginx:#{Build.BuildId}#
         ports:
         - containerPort: 80
