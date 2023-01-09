@@ -1,26 +1,27 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: nginx-deployement
+  name: nginx-deployement
 spec:
- replicas: 1
- selector:
- matchLabels:
- app: nginx-app
- template:
- metadata:
- labels:
- app: nginx-app
- spec:
- containers:
- - name: nginx
- image: samples
- resources:
- requests:
- cpu: 100m
- memory: 128Mi
- limits:
- cpu: 250m
- memory: 256Mi
- ports:
- - containerPort: 80
+  replicas: 1
+  selector: null
+  matchLabels: null
+  app: nginx-app
+  template: null
+  metadata:
+    labels:
+      app: nginx-app
+      spec: null
+  containers:
+    - name: nginx
+      image: samples
+  resources: null
+  requests:
+    cpu: 100m
+    memory: 128Mi
+    limits:
+      cpu: 250m
+      memory: 256Mi
+  ports:
+    - containerPort: 80
